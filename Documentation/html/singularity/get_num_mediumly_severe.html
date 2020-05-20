@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<!--HEADER FOR THE PAGE -->
+  <head>
+	<link href="../style.css" type="text/css" rel="stylesheet">
+	<title>GridPro API Documentation</title>
+  </head>
+  
+<!--Title Bar -->
+	<div class="header">
+	  <p><img class="logo" style="float: left;" src="../../images/gridpro_logo.png" height="76.667" width="275">
+	  <h1 class="title" align="center"> API Documentation</h1></p>
+	</div>
+	<div class="sidenav">
+		<a href="../introduction.html" >Introduction</a>
+		<a href="../corner.html" >Corner</a>
+		<a href="../surface.html" >Surface</a>
+		<a href="../topology.html" >Topology</a>
+		<a href="../cornergroup.html" >Corner Group</a>
+		<a href="../surfacegroup.html" >Surface Group</a>
+		<a href="../singularities.html" >Singularities</a>
+		<a href="../density.html" >Density</a>
+		<a href="../vector3d.html" >Vector3D</a>
+	</div>
+	
+	<div class="editor">
+		<h5>Function name: <i>get_num_mediumly_severe( )</i></h5>
+		<p class="tab"> For every function, the basic syntax, a brief description and a usage example has been provided. Since all these functions come under the class Topology, we need to call the class and the respective object type when we want to use any member function. The syntax for this can be:</p>
+		<p class="syntax"><strong>topo = gp_utilities.Topology ( )</strong>         #Call the class first</p></h6>
+		<p class="syntax"><strong>singlr = topo.singularity )</strong>         #Next the object type</p></h6>
+		<p class="tab">From here on any function in the object can be accessed and used by using a syntax which looks like:</p>
+		<p class="syntax"><strong>var = singlr.<i>function_name( )</i></strong>         #Finally the function</p></h6>
+
+		<h5 style="display: inline">Description:</h5> <p style="display: inline"> Returns the number of mediumly severe singular edges. <br><br></p>
+		<h5 style="display: inline">Parameters:</h5> <p style="display: inline"> None <br><br></p>
+		<h5 style="display: inline">Returns:</h5> <p style="display: inline"> Number of mediumly severe singular edges. <br><br></p>
+		<h5 style="display: inline">Example:</h5> <p style="display: inline"> num_edges = singlr.get_num_mediumly_severe( )<br><br></p>
+		<h5 style="display: inline">Notes:</h5> <p style="display: inline"> <br><br></p>
+	</div>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<!--HEADER FOR THE PAGE -->
+  <head>
+	<link href="./style.css" type="text/css" rel="stylesheet">
+	<title>GridPro API Documentation</title>
+  </head>
+  
+<!--Title Bar -->
+	<div class="header">
+	  <p><img class="logo" style="float: left;" src="../images/gridpro_logo.png" height="76.667" width="275">
+	  <h1 class="title" align="center"> API Documentation</h1></p>
+	</div>
+	<div class="sidenav">
+		<a href="./introduction.html" >Introduction</a>
+		<a href="./corner.html" >Corner</a>
+		<a href="./surface.html" >Surface</a>
+		<a href="./topology.html" >Topology</a>
+		<a href="./cornergroup.html" >Corner Group</a>
+		<a href="./surfacegroup.html" >Surface Group</a>
+		<a href="./singularities.html" >Singularities</a>
+		<a href="./density.html" >Density</a>
+		<a href="./vector3d.html" >Vector3D</a>
+	</div>
+	
+	<div class="editor">
+		<div class="surface">
+			<h3>Surface:</h3><hr>
+			<p class="tab"> A topology cannot be defined without a set of bounding surfaces. Surface data structure stores the information common to all kinds of surfaces. It stores the surface index, transformation details, orientation, clustering parameters, label and property of the surface. There are various types of surfaces that can be loaded into GridPro.</p>
+			<h5>The syntax for this object type is: <strong>surface( )</strong></h5>
+			<p class="tab"> Every object type comes under the class called <a href="./topology.html" style="text-decoration: none;">TOPOLOGY</a>. And it has two sets of member functions, One set is the list of functions which execute the defined operations and the other set is the list of functions which gets the necessary information. Following are the list of member functions under this object type:</p>
+			<h6>Operations:</h6>
+			<ul>
+				<li><a href="./surface/delete_surface.html" >delete_surface</a></li>
+				<li><a href="./surface/set_first_cell_height.html" >set_first_cell_height</a></li>
+				<li><a href="./surface/set_stretch.html" >set_stretch</a></li>
+				<li><a href="./surface/set_load_only_once.html" >set_load_only_once</a></li>
+				<li><a href="./surface/set_ewall_spacing.html" >set_ewall_spacing</a></li>
+				<li><a href="./surface/set_label.html" >set_label</a></li>
+				<li><a href="./surface/set_pty.html" >set_pty</a></li>
+				<li><a href="./surface/set_orientation.html" >set_orientation</a></li>
+				<li><a href="./surface/label_faces.html" >label_faces</a></li>
+			</ul>
+			<h6>Query Functions:</h6> 
+			<ul>
+				<li><a href="./surface/get_id.html" >get_id</a></li>
+				<li><a href="./surface/get_label.html" >get_label</a></li>
+				<li><a href="./surface/get_load_only_once_status.html" >get_load_only_once_status</a></li>
+				<li><a href="./surface/get_property.html" >get_property</a></li>
+				<li><a href="./surface/get_first_cell_height.html" >get_first_cell_height</a></li>
+				<li><a href="./surface/get_ewall_spacing.html" >get_ewall_spacing</a></li>
+				<li><a href="./surface/get_stretch.html" >get_stretch</a></li>
+				<li><a href="./surface/is_internal_surface.html" >is_internal_surface</a></li>
+				<li><a href="./surface/is_a_valid_surface.html" >is_a_valid_surface</a></li>
+				<li><a href="./surface/num_assigned_corners.html" >num_assigned_corners</a></li>
+				<li><a href="./surface/num_assigned_faces.html" >num_assigned_faces</a></li>
+			</ul>
+		</div>
+	</div>

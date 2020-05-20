@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<!--HEADER FOR THE PAGE -->
+  <head>
+	<link href="./style.css" type="text/css" rel="stylesheet">
+	<title>GridPro API Documentation</title>
+  </head>
+  
+<!--Title Bar -->
+	<div class="header">
+	  <p><img class="logo" style="float: left;" src="../images/gridpro_logo.png" height="76.667" width="275">
+	  <h1 class="title" align="center"> API Documentation</h1></p>
+	</div>
+	<div class="sidenav">
+		<a href="./introduction.html" >Introduction</a>
+		<a href="./corner.html" >Corner</a>
+		<a href="./surface.html" >Surface</a>
+		<a href="./topology.html" >Topology</a>
+		<a href="./cornergroup.html" >Corner Group</a>
+		<a href="./surfacegroup.html" >Surface Group</a>
+		<a href="./singularities.html" >Singularities</a>
+		<a href="./density.html" >Density</a>
+		<a href="./vector3d.html" >Vector3D</a>
+	</div>
+	
+	<div class="editor">
+		<div class="corner">
+			<h3>Corner:</h3><hr>
+			<p class="tab"> Corner data structure stores corner information like positioning, corner links and their assignment details.A collection of corners and their links describe the wireframe structure. So a corner (or node/point) is a basic entity of a wireframe. A corner is defined by it's position and the links joining them. For a valid topology definition, the corners should also contain the surface assignment information. Apart from this, in a periodic topology, corner stores the paired corner information for periodic definition.</p>
+			<h5>The syntax for this object type is: <strong>corner(corner_id)</strong></h5>
+			<p class="tab"> Every object type comes under the class called <a href="./topology.html" style="text-decoration: none;">TOPOLOGY</a>. The corner object type takes an id as the input parameter. And it has two sets of member functions, One set is the list of functions which execute the defined operations and the other set is the list of functions which gets the necessary information. Following are the list of member functions under this object type:</p>
+			<h6>Operations:</h6>
+			<ul>
+				<li><a href="./corner/set_coordinates.html" >set_coordinates</a></li>
+				<li><a href="./corner/delete_corner.html" >delete_corner</a></li>
+				<li><a href="./corner/assign.html" >assign</a></li>
+				<li><a href="./corner/unassign.html" >unassign</a></li>
+			</ul>
+			<h6>Query Functions:</h6> 
+			<ul>
+				<li><a href="./corner/get_id.html" >get_id</a></li>
+				<li><a href="./corner/get_coordinates.html" >get_coordinates</a></li>
+				<li><a href="./corner/get_links.html" >get_links</a></li>
+				<li><a href="./corner/get_assignments.html" >get_assignments</a></li>
+				<li><a href="./corner/get_paired_corner.html" >get_paired_corner</a></li>
+				<li><a href="./corner/get_distance.html" >get_distance</a></li>
+		</div>
+	</div>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<!--HEADER FOR THE PAGE -->
+  <head>
+	<link href="../style.css" type="text/css" rel="stylesheet">
+	<title>GridPro API Documentation</title>
+  </head>
+  
+<!--Title Bar -->
+	<div class="header">
+	  <p><img class="logo" style="float: left;" src="../../images/gridpro_logo.png" height="76.667" width="275">
+	  <h1 class="title" align="center"> API Documentation</h1></p>
+	</div>
+	<div class="sidenav">
+		<a href="../introduction.html" >Introduction</a>
+		<a href="../corner.html" >Corner</a>
+		<a href="../surface.html" >Surface</a>
+		<a href="../topology.html" >Topology</a>
+		<a href="../cornergroup.html" >Corner Group</a>
+		<a href="../surfacegroup.html" >Surface Group</a>
+		<a href="../singularities.html" >Singularities</a>
+		<a href="../density.html" >Density</a>
+		<a href="../vector3d.html" >Vector3D</a>
+	</div>
+
+	<div class="editor">
+		<h5>Function name:<i> set_coords( )</i></h5>
+		<p class="tab"> For every function, the basic syntax, a brief description and a usage example has been provided. Since Topology acts as both class and object type, we just need to call the class and then the respective member function. The syntax for this can be:</p>
+		<p class="syntax"><strong>topo = gp_utilities.Topology ( )</strong>         #Call the class</p></h6>
+		<p class="tab">From here on any function in the object can be accessed and used by using a syntax which looks like:</p>
+		<p class="syntax"><strong>var = topo.<i>function_name( )</i></strong>         #Then the function</p></h6>
+		<h5 style="display: inline">Description:</h5> <p style="display: inline"> Set coordinates of multiple corners simultaneously.<br><br></p>
+		<h5 style="display: inline">Parameters:</h5> <p style="display: inline"> (corner id1: gp_utilities.vector3d(x1, y1, z1), corner id2: gp_utilities.vector3d(x2, y2, z2)) <br><br></p>
+		<h5 style="display: inline">Returns:</h5> <p style="display: inline"> None <br><br></p>
+		<h5 style="display: inline">Example:</h5> <p style="display: inline"> set = topo.set_coords({ c1:vec1, c2:vec2 })<br><br></p>
+		<h5 style="display: inline">Notes:</h5> <p style="display: inline"> c1 and c2 should be called from the corner object like topo.corner(1).<br><br></p>
+	</div>

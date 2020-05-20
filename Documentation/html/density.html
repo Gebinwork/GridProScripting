@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<!--HEADER FOR THE PAGE -->
+  <head>
+	<link href="./style.css" type="text/css" rel="stylesheet">
+	<title>GridPro API Documentation</title>
+  </head>
+  
+<!--Title Bar -->
+	<div class="header">
+	  <p><img class="logo" style="float: left;" src="../images/gridpro_logo.png" height="76.667" width="275">
+	  <h1 class="title" align="center"> API Documentation</h1></p>
+	</div>
+	<div class="sidenav">
+		<a href="./introduction.html" >Introduction</a>
+		<a href="./corner.html" >Corner</a>
+		<a href="./surface.html" >Surface</a>
+		<a href="./topology.html" >Topology</a>
+		<a href="./cornergroup.html" >Corner Group</a>
+		<a href="./surfacegroup.html" >Surface Group</a>
+		<a href="./singularities.html" >Singularities</a>
+		<a href="./density.html" >Density</a>
+		<a href="./vector3d.html" >Vector3D</a>
+	</div>
+	
+	<div class="editor">
+		<div class="density">
+			<h3>Density:</h3><hr>
+			<p class="tab"> The density of a grid is of great importance; a grid can be used for analysis only if the gridded region is sufficiently resolved. Before you begin the gridding process, you can specify the density of the grid you wish to create. Density is a number that describes the number of grid cells along an edge (and thus all compatible edges). The grid cell count is directly proportional to the grid’s overall density. Including both endpoints of an edge, the number of mesh lines present is, one more than the number of cells inputted. You must set the density of the grid in the Topology tab; you will not see the results of any density alterations until you actually see the grid. You can only alter the grid density of sets of topologically parallel edges, or all edges. By altering the density of only one edge, the code automatically modifies the density of all parallel edges. </p>
+			<h5>The syntax for this object type is: <strong>den( )</strong></h5>
+			<p class="tab"> Every object type comes under the class called <a href="./topology.html" style="text-decoration: none;">TOPOLOGY</a>. And it has two sets of member functions, One set is the list of functions which execute the defined operations and the other set is the list of functions which gets the necessary information. Following are the list of member functions under this object type: </p>
+			<h6>Operations:</h6>
+			<ul>
+				<li><a href="./density/set_default.html" >set_default</a></li>
+				<li><a href="./density/set_density.html" >set_density</a></li>
+				<li><a href="./density/clear.html" >clear</a></li>
+			</ul>
+			<h6>Query Functions:</h6> 
+			<ul>
+				<li><a href="./density/default_density.html" >default_density</a></li>
+				<li><a href="./density/get_density.html" >get_density</a></li>
+			</ul>
+		</div>
+	</div>

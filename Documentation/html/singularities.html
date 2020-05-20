@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<!--HEADER FOR THE PAGE -->
+  <head>
+	<link href="./style.css" type="text/css" rel="stylesheet">
+	<title>GridPro API Documentation</title>
+  </head>
+  
+<!--Title Bar -->
+	<div class="header">
+	  <p><img class="logo" style="float: left;" src="../images/gridpro_logo.png" height="76.667" width="275">
+	  <h1 class="title" align="center"> API Documentation</h1></p>
+	</div>
+	<div class="sidenav">
+		<a href="./introduction.html" >Introduction</a>
+		<a href="./corner.html" >Corner</a>
+		<a href="./surface.html" >Surface</a>
+		<a href="./topology.html" >Topology</a>
+		<a href="./cornergroup.html" >Corner Group</a>
+		<a href="./surfacegroup.html" >Surface Group</a>
+		<a href="./singularities.html" >Singularities</a>
+		<a href="./density.html" >Density</a>
+		<a href="./vector3d.html" >Vector3D</a>
+	</div>
+	
+	<div class="editor">
+		<div class="singularity">
+			<h3>Singularity:</h3><hr>
+			<p class="tab">In 3-d, a regular grid point in a structured grid has 6 neighboring grid points which form a well-defined index coordinate system. For multi-block structured grids, most of the grid points are regular. However, singular grid points are introduced for steering the grid lines to better fit a complex geometry. Singularities can be classified on the topological level, instead of for grid points. There are two types of topological singularities: singular block corners, and singular block edges. A singular grid point is either on a singular corner or on a singular edge.</p>
+			<p class="tab">For 3-d cases, the term singularity usually means singular edges. On the other hand, for 2-d, singular corners are the only type of singularities. A singularity is ranked with the number of neighboring blocks. For internal edges (i.e. edges not on surfaces) in 3-d, a regular one has 4 neighboring blocks. An internal edge having three neighboring blocks is called a singularity of degree 3. Similarly, an internal edge having five neighboring blocks is called a singularity of degree 5. It is more difficult to generate good grids around a singularity as the degree moves farther from the regular number 4. Grid<i>Pro</i> restricts the degree of a singularity to be either 3, or 5 to 7. However, one should almost exclusively limit his singularities to degree 3 and degree 5. A singularity of degree higher than 5 can always be split into several singularities of degree 5 using a general procedure without completely redesigning the topology. The tradeoff is increasing the number of blocks.</p>
+			<p class="tab"> When a sufficiently high degree of symmetry is present in the surface geometry and in the block topology near these singularities, the blocks around a singularity will be more or less uniformly distributed. So you should avoid putting singularities on surfaces. In other words, you should try your best to design a topology that wraps around the surfaces. The following situations are considered to be regular on surfaces (3-d): an edge on a single surface having two neighboring blocks; and, an edge on the intersection of two surfaces having only one neighboring block. Any other surface edge is a singular surface edge and should be avoided in the design. For 2-d cases, things said about edges can be said about corners. Based on the effects of these, the singularities are split into 3 types. They are mildly, mediumly and very severe singularity. </p>
+			<h5>The syntax for this object type is: <strong>singularity( )</strong></h5>
+			<p class="tab"> Every object type comes under the class called <a href="./topology.html" style="text-decoration: none;">TOPOLOGY</a>. And it has two sets of member functions, One set is the list of functions which execute the defined operations and the other set is the list of functions which gets the necessary information. Following are the list of member functions under this object type: </p>
+			<h6>Query Functions:</h6> 
+			<ul>
+				<li><a href="./singularity/very_severe.html" >very_severe</a></li>
+				<li><a href="./singularity/mediumly_severe.html" >mediumly_severe</a></li>
+				<li><a href="./singularity/mildly_severe.html" >mildly_severe</a></li>
+				<li><a href="./singularity/get_num_very_severe.html" >get_num_very_severe</a></li>
+				<li><a href="./singularity/get_num_mediumly_severe.html" >get_num_mediumly_severe</a></li>
+				<li><a href="./singularity/get_num_mildly_severe.html" >get_num_mildly_severe</a></li>
+				<li><a href="./singularity/N_point_edges.html" >N_point_edges</a></li>
+			</ul>
+		</div>
+	</div>

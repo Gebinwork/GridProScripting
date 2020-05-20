@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<!--HEADER FOR THE PAGE -->
+  <head>
+	<link href="./style.css" type="text/css" rel="stylesheet">
+	<title>GridPro API Documentation</title>
+  </head>
+  
+<!--Title Bar -->
+	<div class="header">
+	  <p><img class="logo" style="float: left;" src="../images/gridpro_logo.png" height="76.667" width="275">
+	  <h1 class="title" align="center"> API Documentation</h1></p>
+	</div>
+	<div class="sidenav">
+		<a href="./introduction.html" >Introduction</a>
+		<a href="./corner.html" >Corner</a>
+		<a href="./surface.html" >Surface</a>
+		<a href="./topology.html" >Topology</a>
+		<a href="./cornergroup.html" >Corner Group</a>
+		<a href="./surfacegroup.html" >Surface Group</a>
+		<a href="./singularities.html" >Singularities</a>
+		<a href="./density.html" >Density</a>
+		<a href="./vector3d.html" >Vector3D</a>
+	</div>
+	
+	<div class="editor">
+		<div class="cornergroup">
+			<h3>Group:</h3><hr>
+			<p class="tab"> One tool that helps you create three-dimensional topologies is the workplane; another tool is group. Often, you will repeat procedures for creating topologies because grid topology often requires the user to repeat operations. GridPro has developed the group feature in order to help you circumvent the procedural repetition so prevalent in the field of grid generation.</p>
+			<p class="tab">More than any other feature, groups help you manipulate three-dimensional topology effectively. Creating a typical topology composed of hundreds of corners and edges without utilizing groups is ill-conceived, time-consuming, and unnecessary. Similar to topology groups, you can group surfaces also. Surface group is as much useful as corner groups as it helps you to differentiate groups of surfaces from all the surfaces loaded into the file.</p>
+			
+			<h5>Corner Group:</h5><hr>
+			<h5>The syntax for this object type is: <strong>corner_group(group_id)</strong></h5>
+			<p class="tab"> Every object type comes under the class called <a href="./topology.html" style="text-decoration: none;">TOPOLOGY</a>. And it has two sets of member functions, One set is the list of functions which execute the defined operations and the other set is the list of functions which gets the necessary information. Following are the list of member functions under this object type: </p>
+			<h6>Operations:</h6>
+			<ul>
+				<li><a href="./corner_group/append.html">append</a></li>
+				<li><a href="./corner_group/add.html">add</a></li>
+				<li><a href="./corner_group/add_multiple.html">add_multiple</a></li>
+				<li><a href="./corner_group/add_all.html">add_all</a></li>
+				<li><a href="./corner_group/add_assignments.html">add_assignments</a></li>
+				<li><a href="./corner_group/add_all_after_index.html">add_all_after_index</a></li>
+				<li><a href="./corner_group/assign.html">assign</a></li>
+				<li><a href="./corner_group/remove.html">remove</a></li>
+				<li><a href="./corner_group/remove_multiple.html">remove_multiple</a></li>
+				<li><a href="./corner_group/unassign.html">unassign</a></li>
+				<li><a href="./corner_group/clear.html">clear</a></li>
+				<li><a href="./corner_group/delete_all.html">delete_all</a></li>
+				<li><a href="./corner_group/replicate.html">replicate</a></li>
+				<li><a href="./corner_group/rlink.html">rlink</a></li>
+				<!-- <li><a href="./corner_group/merge.html">merge</a></li> -->
+				<li><a href="./corner_group/pair.html">pair</a></li>
+			</ul>
+			<h6>Query Functions:</h6> 
+			<ul>
+				<li><a href="./corner_group/contains.html">contains</a></li>
+				<li><a href="./corner_group/size.html">size</a></li>
+				<li><a href="./corner_group/get_all.html">get_all</a></li>
+				<li><a href="./corner_group/num_edges.html">num_edges</a></li>
+				<li><a href="./corner_group/num_faces.html">num_faces</a></li>
+				<li><a href="./corner_group/num_blocks.html">num_blocks</a></li>
+		</div>
+	</div>

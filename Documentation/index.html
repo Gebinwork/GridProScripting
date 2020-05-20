@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<!--HEADER FOR THE PAGE -->
+  <head>
+	<link href="./html/style.css" type="text/css" rel="stylesheet">
+	<title>GridPro API Documentation</title>
+  </head>
+  
+<!--Title Bar -->
+	<div class="header">
+	  <p><img class="logo" style="float: left;" src="./images/gridpro_logo.png" height="76.667" width="275">
+	  <h1 class="title" align="center"> API Documentation</h1></p>
+	</div>
+	<div class="sidenav">
+		<a href="./html/introduction.html" >Introduction</a>
+		<a href="./html/corner.html" >Corner</a>
+		<a href="./html/surface.html" >Surface</a>
+		<a href="./html/topology.html" >Topology</a>
+		<a href="./html/cornergroup.html" >Corner Group</a>
+		<a href="./html/surfacegroup.html" >Surface Group</a>
+		<a href="./html/singularities.html" >Singularities</a>
+		<a href="./html/density.html" >Density</a>
+		<a href="./html/vector3d.html" >Vector3D</a>
+	</div>
+	
+	<div class="editor">
+		<div class="welcome">
+			<p> Welcome to Grid<i>Pro</i>'s Python API documentation! </p>
+		</div>
+		<div class="content">
+			<p class="tab"> This is a python implementation of Grid<i>Pro</i>'s Topology Input Language(TIL).The aim of making this accessible to the user is to provide greater flexibility in using the software for automation purposes. The topology input language (TIL) is used to record the topology into files. The topology files must have the file name extension ‘.fra’. The design and recording process can be done either by manually programming in TIL or using WS GUI. While programming the TIL file the user specifies mainly a sequence of corner definitions, each of which provides an approximate initial position of the current corner, a list of other corners that has a link to the current corner, and a list of surfaces to which the corners have to be projected. The Grid generator takes the input and creates the information about the edges, faces and blocks automatically! <br></p>
+			<p class="tab"> With the help of this API, users will have the flexibility to define the building process of a topology file from scratch without any GUI access. This will facilitate in automation of blocking for geometries in a given design space. Alternatively the API can also be used to manipulate existing topology files to suit the users need and perform automation tasks. </p>
+			
+			<h3>Licensing:</h3><hr>
+			<p class="tab">The API requires a valid license which looks like as shown below.</p>
+			<p class="license">0   gpapi.0  7.0   12.31.2020   0xa123b4c5   DESKTOP   4  float   qibN2XNTtAffigz7ERnJB4ASdhHQNZ96TxKvBUlM   #Grid<i>Pro</i>.License</p>
+			<p class="tab">Where,
+			<ul><pre style="line-height: 12px;">
+				<li>         0 = License Id</li>
+				<li>   gpapi.0 = License Parameter</li>
+				<li>       7.0 = License Version</li>
+				<li>12.31.2020 = Date of Expiry</li>
+				<li>0xa123b4c5 = Ethernet/Mac Address</li>
+				<li>   DESKTOP = Hostname</li>
+				<li>         4 = License Count</li>
+				<li>     float = License Type</li>
+				<li>qibN...UlM = License Key</li>				
+			</pre></ul>
+			
+			<h3>Requirements:</h3><hr>
+			<p class="tab">To utilise the API, you need to have a API license which is shown above and python 2.7. </p>
+			
+			<h3>Platform Support:</h3><hr>
+			<p class="tab">The API is successfully tested with python 2.7 on Windows, Linux and Mac OS. </p>
+			
+			<h3>Usage:</h3><hr>
+			<p class="tab">The most basic usage of the python API for Grid<i>Pro</i> is to:</p>
+			<ol><pre style="line-height: 12px;">
+				<li>Import the gp_utilities module first</li>
+				<li>Then call the Topology class</li>			
+				<li>Next call the Object type</li>
+				<li>Finally the desired function name</li>
+			</pre></ol>
+			
+			<h3>Classes:</h3><hr>
+			<p class="tab"> Following are the major classes and object types of the API. All the relevant member functions are grouped under it's respective object type. Please note that all of these object types come under the class called <a href="./html/topology.html" style="text-decoration: none;">TOPOLOGY</a> except vector3D, which by itself is a class.<br></p>
+
+			<section>
+				<h3><a href="./html/corner.html" >Corner</a></h3>
+				<p class="tab">Corner data structure stores corner information like positioning, corner links and their assignment details</p>
+			</section>
+			<section>
+				<h3><a href="./html/surface.html" >Surface</a></h3>
+				<p class="tab">A topology cannot be defined without a set of bounding surfaces. Surface data structure stores the information common to all kinds of surfaces. 
+				It stores the surface index, transformation details, orientation, clustering parameters, label and property of the surface. There are various types of surfaces that can be loaded into Grid<i>Pro</i></p>
+			</section>
+			<section>
+				<h3><a href="./html/topology.html" >Topology</a></h3>
+				<p class="tab">Topology data structure containing corners, surfaces and other information</p>
+			</section>
+			<section>
+				<h3><a href="./html/cornergroup.html" >Corner Group</a></h3>
+				<p class="tab"> Corner groups helps you manipulate 3D topology effectively.</p>
+			</section>
+			<section>
+				<h3><a href="./html/surfacegroup.html" >Surface Group</a></h3>
+				<p class="tab"> Surface group is as much useful as corner groups as it helps you to differentiate groups of surfaces from all the surfaces in the topology.</p>
+			</section>
+			<section>
+				<h3><a href="./html/singularities.html" >Singularities</a></h3>
+				<p class="tab"> Singularity usually means singular edges in 3D and singular points in 2D. There are primarily used to steer the grid lines to better fit a complex geometry. 
+				GridPro restricts the degree of a singularity to be either 3, or 5 to 6.</p>
+			</section>
+			<section>
+				<h3><a href="./html/density.html" >Density</a></h3>
+				<p class="tab">Density is a number that describes the number of grid cells along an edge (and thus all compatible edges)</p>
+			</section>
+			<section>
+				<h3><a href="./html/vector3d.html" >Vector3D</a></h3>
+				<p class="tab">Constructor which accepts 3 coordinates. It should be used only in 3D Topologies.</p>
+			</section>
+			
+			<h3>Example Usage:</h3><hr>
+			<pre class="code">
+		# IMPORT OPERATIONS
+		import gp_utilities
+		from gp_utilities import vector3d as vec
+		
+		#Main Function
+		if(__name__ == '__main__'):
+		topo = gp_utilities.Topology()      #Assign Topology Class
+		
+		#Creating surface for each face of the cube
+		s0 = topo.add_plane(vec(0, 0.5, 0.5), vec(-0.4,0,0))
+		s1 = topo.add_plane(vec(1, 0.5, 0.5), vec( 0.4,0,0))
+		s2 = topo.add_plane(vec(0.5, 0, 0.5), vec(0,-0.4,0))
+		s3 = topo.add_plane(vec(0.5, 1, 0.5), vec(0, 0.4,0))
+		s4 = topo.add_plane(vec(0.5, 0.5, 0), vec(0,0,-0.4))
+		s5 = topo.add_plane(vec(0.5, 0.5, 1), vec(0,0, 0.4))
+		
+		#Corner Creation
+		c0 = topo.add_corner(0, 0, 0)     #Corner id 0
+		c1 = topo.add_corner(1, 0, 0)     #Corner id 1
+		c2 = topo.add_corner(0, 1, 0)     #Corner id 2
+		c3 = topo.add_corner(1, 1, 0)     #Corner id 3
+		c4 = topo.add_corner(0, 0, 1)     #Corner id 4
+		c5 = topo.add_corner(1, 0, 1)     #Corner id 5
+		c6 = topo.add_corner(0, 1, 1)     #Corner id 6
+		c7 = topo.add_corner(1, 1, 1)     #Corner id 7
+
+		#Linking the corners
+		topo.link([(c0,c1), (c0,c2), (c2,c3), (c1,c3),
+				   (c4,c5), (c4,c6), (c6,c7), (c5,c7),
+				   (c0,c4), (c1,c5), (c2,c6), (c3,c7)])
+
+		#Assigning the corners to each of the surface
+		c0.assign(s4)
+		c0.assign(s2)    #c0.assign_multiple([s4,s2,s0])
+		c0.assign(s0)
+		
+		c1.assign(s4)
+		c1.assign(s2)
+		c1.assign(s1)
+		
+		c2.assign(s4)
+		c2.assign(s3)
+		c2.assign(s0)
+
+		c3.assign(s4)
+		c3.assign(s3)
+		c3.assign(s1)
+
+		c4.assign_multiple([s5,s2,s0])
+
+		c5.assign_multiple([s5,s2,s1])
+		
+		c6.assign_multiple([s5,s3,s0])
+
+		c7.assign_multiple([s5,s3,s1])
+
+		#Writing the fra file
+		topo.write_topology("cube.fra")
+		</pre>
+		</div>
+	</div>

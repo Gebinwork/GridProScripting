@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<!--HEADER FOR THE PAGE -->
+  <head>
+	<link href="../style.css" type="text/css" rel="stylesheet">
+	<title>GridPro API Documentation</title>
+  </head>
+  
+<!--Title Bar -->
+	<div class="header">
+	  <p><img class="logo" style="float: left;" src="../../images/gridpro_logo.png" height="76.667" width="275">
+	  <h1 class="title" align="center"> API Documentation</h1></p>
+	</div>
+	<div class="sidenav">
+		<a href="../introduction.html" >Introduction</a>
+		<a href="../corner.html" >Corner</a>
+		<a href="../surface.html" >Surface</a>
+		<a href="../topology.html" >Topology</a>
+		<a href="../cornergroup.html" >Corner Group</a>
+		<a href="../surfacegroup.html" >Surface Group</a>
+		<a href="../singularities.html" >Singularities</a>
+		<a href="../density.html" >Density</a>
+		<a href="../vector3d.html" >Vector3D</a>
+	</div>
+
+	<div class="editor">
+		<h5>Function name:<i> add_surface( )</i></h5>
+		<p class="tab"> For every function, the basic syntax, a brief description and a usage example has been provided. Since Topology acts as both class and object type, we just need to call the class and then the respective member function. The syntax for this can be:</p>
+		<p class="syntax"><strong>topo = gp_utilities.Topology ( )</strong>         #Call the class</p></h6>
+		<p class="tab">From here on any function in the object can be accessed and used by using a syntax which looks like:</p>
+		<p class="syntax"><strong>var = topo.<i>function_name( )</i></strong>         #Then the function</p></h6>
+		<h5 style="display: inline">Description:</h5> <p style="display: inline">Appends a new surface to the topology. A surface has an id, orientation, clustering parameters and other transformation details. It should also have a type and a definition or exterior file name for a valid surface definition. All this information should be part of the input string.<br>
+		For e.g:<br><pre style="font-family: 'sans-serif'">
+		"s 4 -plane @({0.8, 0, 0},{0, 0, 0}) -R 0 0 1 0 1 0 -1 0 0 -t 0 0 -1 ;"          <i>#Analytical/Built-in Surface</i><br>
+		"s 5 -quad "input.quad" -O ;"          <i>#Non-Analytical Surface</i> <br><br></pre></p>
+		
+		<p>
+		<table>
+		  <thead>
+		  <tr class="table_head">
+		    <th>Surface type</th>
+		    <th>Command</th>
+		    <th>Description</th>
+		  </tr>
+		  </thead>
+		  
+		  <tbody>
+		  <tr>
+		    <td >Plane</td>
+		    <td>add_surf = topo.add_plane(vector3d(0, 0, 0), vector3d(0, 0, 1))</td>
+		    <td>A plane at origin, with normal aligned to z-axis.</td>
+		  </tr>
+		  <tr>
+		  <td>Cylinder</td>
+		  <td>add_surf = topo.add_cylinder(vector3d(0, 0, 0), vector(0, 0, 1), 1, 2)</td>
+		  <td>A cylinder with center at origin. It is aligned to z-axis, with length 1 (for display purposes only). Ellipsoid power = 2.</td>
+		</tr>
+		<tr>
+		  <td>Ellipsoid</td>
+		  <td>add_surf = topo.add_ellipsoid(vector3d(0, 0, 0), 1, 2, 2)</td>
+		  <td>An ellipsoid at origin, with radii 1, 2 and 2, along x, y and z axes. </td>
+		</tr>
+		<tr>
+		  <td>Tria/Quad/Tube surface</td>
+		  <td>load_tria = topo.load_surface("1.tria").</td>
+		  <td>To load a surface from file. You can load a tria, quad and a tube surface. </td>
+		</tr>
+		<tr>
+		  <td>Rotational Periodic</td>
+		  <td>rot_period = topo.add_xpolar(vector3d(0,0,0), vector3d(0,0,1), 60).</td>
+		  <td>Rotational periodic surface at origin, along Z axis, with a periodicity of 60 degrees.</td>
+		</tr>
+		<tr>
+		  <td>Translational Periodic</td>
+		  <td>trl_period = topo.add_xyz(vector3d(0,0,0), vector3d(1,0,0), 60).</td>
+		  <td>Translational periodic surface at origin, along X axis, with a periodicity of 60 units.</td>
+		</tr>
+		  </tbody>
+		  
+		  </table>
+		</p>
+
+		<h5 style="display: inline">Parameters:</h5> <p style="display: inline"> As provided in the description above.<br><br></p>
+		<h5 style="display: inline">Returns:</h5> <p style="display: inline"> None <br><br></p>
+		<h5 style="display: inline">Example:</h5> <p style="display: inline"> add_surf = topo.add_surface('surface string')<br><br></p>
+		<h5 style="display: inline">Notes:</h5> <p style="display: inline"> Along with add_surface( ) command, all other surface creation operations are explained in the table above. Please use the respective commands for the desired surface creation. <br><br></p>
+	</div>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<!--HEADER FOR THE PAGE -->
+  <head>
+	<link href="./style.css" type="text/css" rel="stylesheet">
+	<title>GridPro API Documentation</title>
+  </head>
+  
+<!--Title Bar -->
+	<div class="header">
+	  <p><img class="logo" style="float: left;" src="../images/gridpro_logo.png" height="76.667" width="275">
+	  <h1 class="title" align="center"> API Documentation</h1></p>
+	</div>
+	<div class="sidenav">
+		<a href="./introduction.html" >Introduction</a>
+		<a href="./corner.html" >Corner</a>
+		<a href="./surface.html" >Surface</a>
+		<a href="./topology.html" >Topology</a>
+		<a href="./cornergroup.html" >Corner Group</a>
+		<a href="./surfacegroup.html" >Surface Group</a>
+		<a href="./singularities.html" >Singularities</a>
+		<a href="./density.html" >Density</a>
+		<a href="./vector3d.html" >Vector3D</a>
+	</div>
+	
+	<div class="editor">
+		<div class="topology">
+			<h3>Topology:</h3><hr>
+			<p class="tab"> Topology data structure containing corners, surfaces and other information. It provides a framework for building the wireframe structure, which can be readily used for generating a structured Multiblock grid. All the basic operations like corner creation, linking, repositioning, assignment, deletion and all the group operations can be performed. </p>
+			<p class="tab"> Topology acts as both class and object type. It stores the corners, links and surfaces created by user. It stores other information required by the grid generator like the edge densities, excluded faces/blocks and corner/surface grouping information. It also stores a stack of topology operations which modify the state of the topology.
+			<h5>The syntax for this object type is: <strong>Topology(dimension)</strong></h5></p>
+			<p class="tab"> It has two sets of member functions, One set is the list of functions which execute the defined operations and the other set is the list of functions which gets the necessary information. Following are the list of member functions under this object type:</p>
+			<h6>I/O Functions:</h6> 
+			<ul>
+				<li><a href="./topology/read.html" >read</a></li>
+				<li><a href="./topology/write.html" >write</a></li>
+				<li><a href="./topology/write_schedule_file.html" >write_schedule_file</a></li>
+			</ul>
+			<h6>Build Functions:</h6> 
+			<ul>
+				<li><a href="./topology/build.html" >build</a></li>
+				<li><a href="./topology/is_valid.html" >is_valid</a></li>
+			</ul>
+			<h6>Append Functions:</h6> 
+			<ul>
+				<li><a href="./topology/append.html" >append</a></li>
+				<li><a href="./topology/add_corner.html" >add_corner</a></li>
+				<li><a href="./topology/add_surface.html" >add_surface</a></li>
+
+			</ul>
+			<h6>Getters:</h6> 
+			<ul>
+				<li><a href="./topology/corner.html" >corner</a></li>
+				<li><a href="./topology/surface.html" >surface</a></li>
+				<li><a href="./topology/new_corner_grp.html" >new_corner_grp</a></li>
+				<li><a href="./topology/new_surface_grp.html" >new_surface_grp</a></li>
+				<li><a href="./topology/corner_group.html" >corner_group</a></li>
+				<li><a href="./topology/surface_group.html" >surface_group</a></li>
+				<li><a href="./topology/dimension.html" >dimension</a></li>
+			</ul>
+			<h6>Query Functions:</h6> 
+			<ul>
+				<li><a href="./topology/is_periodic.html" >is_periodic</a></li>
+				<li><a href="./topology/num_corners.html" >num_corners</a></li>
+				<li><a href="./topology/num_surfaces.html" >num_surfaces</a></li>
+				<li><a href="./topology/num_active_corners.html" >num_active_corners</a></li>
+				<li><a href="./topology/num_active_surfaces.html" >num_active_surfaces</a></li>
+				<li><a href="./topology/is_xyz_periodic_topology.html" >is_xyz_periodic_topology</a></li>
+			</ul>
+			<h6>Operations:</h6> 
+			<ul>
+				<li><a href="./topology/set_coords.html" >set_coords</a></li>
+				<li><a href="./topology/delete_all.html" >delete_all</a></li>
+				<li><a href="./topology/exclude_edge.html" >exclude_edge</a></li>
+				<li><a href="./topology/exclude_face.html" >exclude_face</a></li>
+				<li><a href="./topology/exclude_block.html" >exclude_block</a></li>
+				<li><a href="./topology/link.html" >link</a></li>
+				<li><a href="./topology/unlink.html" >unlink</a></li>
+				<li><a href="./topology/pair.html" >pair</a></li>
+				<li><a href="./topology/remove_all_corner_pairings.html" >remove_all_corner_pairings</a></li>
+				<li><a href="./topology/merge.html" >merge</a></li>
+				<li><a href="./topology/merge_group.html" >merge_group</a></li>
+				<li><a href="./topology/project_point_onto_surface.html" >project_point_onto_surface</a></li>
+			</ul>
+		</div>
+	</div>
