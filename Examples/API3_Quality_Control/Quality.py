@@ -18,6 +18,7 @@ def extend_schedule_file(schedule_file_name):
     step_count = 5
     sweep_count = 300
     skewness = 0.8
+    output_file_prefix = "volute"
 
     # Evaluate fold count and skewness value from qcheck output files
     folds,skew = evaluate_fold_count_from_qcheck_output()
@@ -34,9 +35,9 @@ def extend_schedule_file(schedule_file_name):
                 print ("step {}: -c all 1.0 0 -C all 1.0 24 -r -S {} -w\n" + line.rstrip()).format(count, sweep_count)
             else:
                 print ("step {}: -c all 1.0 0 -C all 1.0 24 -r -S {} -w "
-                       "\nstep {}: -sys 'ws qchk volute.grd 11 10000 {} 120' "
+                       "\nstep {}: -sys 'ws qchk {}.grd 11 10000 {} 120' "
                        "\nstep {}: -sys 'python Quality.py {}'\n"
-                       + line.rstrip()).format(count, sweep_count, count + 1, skewness, count + 2, schedule_file_name)
+                       + line.rstrip()).format(count, sweep_count, count + 1, output_file_prefix, skewness, count + 2, schedule_file_name)
         else:
             print line.rstrip()
     
