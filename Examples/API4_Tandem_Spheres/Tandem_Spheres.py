@@ -7,11 +7,11 @@ import variables
 def topo_modify(corners_along_sphere, sphere_surface_group, corners_around_sphere, translation_for_sphere,
                 translation_around_sphere, density_between_spheres, density_after_spheres):
     #Topology_Modification
-    gp_utilities.execute_command("transform_topo -g {} -sg {} -t1 {} {} {}".format(corners_along_sphere, sphere_surface_group,
+    topo.execute("transform_topo -g {} -sg {} -t1 {} {} {}".format(corners_along_sphere, sphere_surface_group,
                                                                                    translation_for_sphere.get_component(0),translation_for_sphere.get_component(1),
-                                                                                   translation_for_sphere.get_component(2)), topo, True)
-    gp_utilities.execute_command("transform_topo -g {} -t1 {} {} {}".format(corners_around_sphere, translation_around_sphere.get_component(0),
-                                                                            translation_around_sphere.get_component(1), translation_around_sphere.get_component(2)), topo, True)
+                                                                                   translation_for_sphere.get_component(2)))
+    topo.execute("transform_topo -g {} -t1 {} {} {}".format(corners_around_sphere, translation_around_sphere.get_component(0),
+                                                                            translation_around_sphere.get_component(1), translation_around_sphere.get_component(2)))
 
     #Density_Modification_between_spheres
     den = topo.den()

@@ -26,9 +26,9 @@
 	<div class="editor">
 		<div class="topology">
 			<h3>Topology:</h3><hr>
-			<p class="tab"> Topology data structure containing corners, surfaces and other information. It provides a framework for building the wireframe structure, which can be readily used for generating a structured Multiblock grid. All the basic operations like corner creation, linking, repositioning, assignment, deletion and all the group operations can be performed. </p>
+			<p class="tab"> Topology data structure containing corners, surfaces and other information. It provides a framework for building the wireframe structure, which can be readily used for generating a structured Multiblock grid. All the basic operations like corner creation, linking, repositioning, assignment, deletion and all the group operations can be performed. By default the topology will be in 3D dimension and have a density value of 8 unless specified explicitly. </p>
 			<p class="tab"> Topology acts as both class and object type. It stores the corners, links and surfaces created by user. It stores other information required by the grid generator like the edge densities, excluded faces/blocks and corner/surface grouping information. It also stores a stack of topology operations which modify the state of the topology.
-			<h5>The syntax for this object type is: <strong>Topology(dimension)</strong></h5></p>
+			<h5>The syntax for this object type is: <strong>Topology(dimension)</strong></h5>
 			<p class="tab"> It has two sets of member functions, One set is the list of functions which execute the defined operations and the other set is the list of functions which gets the necessary information. Following are the list of member functions under this object type:</p>
 			<h6>I/O Functions:</h6> 
 			<ul>
@@ -69,6 +69,7 @@
 			</ul>
 			<h6>Operations:</h6> 
 			<ul>
+				<li><a href="./topology/execute.html" >execute</a></li>
 				<li><a href="./topology/set_coords.html" >set_coords</a></li>
 				<li><a href="./topology/delete_all.html" >delete_all</a></li>
 				<li><a href="./topology/exclude_edge.html" >exclude_edge</a></li>
